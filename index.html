@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8">
+    <title>妙麗歲數計算機 | Corgi Age Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="app-wrapper">
+      <main class="app-card">
+        <header class="app-header">
+          <span class="corgi-icon" aria-hidden="true">🐶</span>
+          <h1>妙麗歲數計算機</h1>
+        </header>
+
+        <p class="app-subtitle">
+          專門替柯基妙麗計算實際年齡與對應的「人類歲數」。
+        </p>
+
+        <section class="form-section">
+          <div class="field-row">
+            <label class="field-label">妙麗生日</label>
+            <div class="field-static" id="birthdayDisplay">2023-02-28</div>
+          </div>
+
+          <div class="field-row">
+            <label class="field-label" for="calcDate">計算日期</label>
+            <input
+              type="date"
+              id="calcDate"
+              class="field-input"
+            >
+          </div>
+
+          <button type="button" id="calcBtn" class="primary-btn">
+            開始計算
+          </button>
+
+          <div class="result-actions">
+            <button type="button" id="todayBtn" class="secondary-btn">
+              以今天為準
+            </button>
+          </div>
+
+          <div id="result" class="result-box" aria-live="polite"></div>
+
+          <p class="note">
+            ※ 換算公式採常見 <strong>1 : 7</strong> 比例，作為參考用的「人類歲數」。
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
